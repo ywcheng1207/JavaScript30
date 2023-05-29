@@ -1,6 +1,6 @@
-# Day2 - JS and CSS Clock
+# Day2 - JS and CSS Clock [DEMO](https://ywcheng1207.github.io/JavaScript30/02%20-%20JS%20and%20CSS%20Clock/index-START.html)
 
-#### 這是一份時鐘作品。
+![](./screenshot.JPG)
 
 <!-- CSS note-->
 <details>

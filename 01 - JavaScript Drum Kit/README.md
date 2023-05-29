@@ -1,8 +1,6 @@
-# Day1 - Drum Kit
+# Day1 - Drum Kit [DEMO](https://ywcheng1207.github.io/JavaScript30/01%20-%20JavaScript%20Drum%20Kit/index-START.html)
 
----
-
-#### 這是一份透過按鍵觸發打鼓聲音效果的作品。
+![](./screenshot.JPG)
 
 <details>
   <summary>HTML </summary>
