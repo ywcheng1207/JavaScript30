@@ -1,11 +1,11 @@
-# <font color="#016cf4">Day1 - Drum Kit</font>
+# Day1 - Drum Kit
 
 ---
 
 #### 這是一份透過按鍵觸發打鼓聲音效果的作品。
 
 <details>
-  <summary style="font-size: 17px; color: #83daff;">HTML </summary>
+  <summary>HTML </summary>
   
 1. 關於 data attribute<br>
    `data-key` 屬性是自己定義的。 <br>
@@ -21,14 +21,14 @@
 </details>
 
 <details>
-  <summary style="font-size: 17px; color: #83daff;">CSS </summary>
+  <summary>CSS </summary>
 
 1. 關於 `transition` 與 `transform`：(釐清容易搞混的功能 😅)<br>
 `transition` 是在控制 CSS 樣式變化的時間，而 `transfrom` 是控制變化的樣式。
 </details>
 
 <details>
-  <summary style="font-size: 17px; color: #83daff;">JS </summary>
+  <summary>JS </summary>
 
 1. 關於`transitionend`：<br>
    - 透過 `transitionend` 抓到 CSS`transition` 結束的時間點，在該時間點針對"帶有 transform 屬性的節點"執行 `classList.remove("playing")`的動作。其中 transform 指是作者剛好挑那一個，其實在這組範例的樣式中，變化的還有 `border-color` 和 `box-shadow`等，所以也可以把那段程式改成：
