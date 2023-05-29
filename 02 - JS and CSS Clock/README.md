@@ -9,7 +9,7 @@
 1. 關於`transform-origin` 與 `transform: rotate()` <br>
 
    - `transform-origin`用於定義 CSS 的`transform`作用的起點。
-   - 資料夾中我做了一份進一步的範例練習(`learn-transform-origin.html`)，可以觀察各種偏移的角度。
+   - 資料夾中我做了一份進一步的範例練習(`learn-transform-origin.html`)，可以觀察各種偏移的角度。 [DEMO](https://ywcheng1207.github.io/JavaScript30/02%20-%20JS%20and%20CSS%20Clock/learn-transform-origin.html)
 
 2. 關於`transition-timing-function` <br>
    - `transition-timing-function`用於定義 CSS 的`transition`期間如何隨時間變化的時間函數。它控制`transition`效果的速度和節奏。 其中，有類型可以選擇，也可以透過`cubic-bezier()`自訂函式。範例就是透過`cubic-bezier()`達到指針在每次移動的時候有微小抖動的效果。
