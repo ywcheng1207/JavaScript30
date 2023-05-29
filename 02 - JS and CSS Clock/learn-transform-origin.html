@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn transform-origin</title>
+    <style>
+      html {
+        font-size: 10px;
+        background-color: black;
+      }
+      .container {
+        height: 15rem;
+        width: 15rem;
+        margin: 10rem;
+        border-radius: 50%;
+        outline: 1px solid tomato;
+        display: inline-block; /* 讓範例水平排列 */
+        position: relative;
+      }
+      .item {
+        height: 0.3rem;
+        width: 6rem;
+        /* 移動指針到圓圈的中間*/
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+      }
+      /* 正確指針 */
+      .item1 {
+        transform: rotate(30deg);
+        transform-origin: 100%;
+        background-color: yellow;
+      }
+      /* 50%是預設值 */
+      .item2 {
+        transform: rotate(30deg);
+        transform-origin: 50%;
+        background-color: rgb(98, 0, 255);
+      }
+      .item3 {
+        transform: rotate(30deg);
+        transform-origin: 30%;
+        background-color: rgb(98, 0, 255);
+      }
+      /* 另一個極端案例參考 */
+      .item4 {
+        transform: rotate(30deg);
+        transform-origin: 0%;
+        background-color: rgb(171, 126, 243);
+      }
+      /* 基準線 */
+      .item5 {
+        background-color: rgb(212, 212, 224);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1"></div>
+      <div class="item item2"></div>
+      <div class="item item3"></div>
+      <div class="item item4"></div>
+      <div class="item item5"></div>
+    </div>
+  </body>
+</html>

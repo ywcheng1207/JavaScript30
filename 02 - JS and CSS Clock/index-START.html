@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS + CSS Clock</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand">hour</div>
+        <div class="hand min-hand">min</div>
+        <div class="hand second-hand">second</div>
+      </div>
+    </div>
+
+    <style>
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        background: #b6b6b6;
+        margin: 0;
+        font-size: 2rem;
+        display: flex;
+        flex: 1;
+        min-height: 100vh;
+        align-items: center;
+      }
+
+      .clock {
+        /* 300*300 ==> 就是html設定的font-size為10px * 30 = 300px */
+        width: 30rem;
+        height: 30rem;
+        border: 20px solid rgb(207, 104, 104);
+        border-radius: 50%;
+        margin: 50px auto; /* 水平置中 */
+        position: relative;
+        padding: 2rem;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+          inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .clock-face {
+        /* 300*300 */
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(
+          -5px
+        ); /* account for the height of the clock hands */
+      }
+
+      .hand {
+        width: 50%;
+        height: 10px;
+        border-radius: 3px;
+        position: absolute;
+        top: 50%;
+        transform-origin: 100%; /* 定義transform轉換的起點，預設是50% */
+        transform: rotate(90deg); /* 把指針轉向從12點鐘開始 */
+        transition: all 0.05s;
+        transition-timing-function: cubic-bezier(0, 3.25, 0.12, 1.64);
+      }
+      .hour-hand {
+        background: rgb(44, 44, 4);
+      }
+      .min-hand {
+        background: rgb(0, 255, 128);
+      }
+      .second-hand {
+        background: yellow;
+      }
+    </style>
+
+    <script src="main.js"></script>
+  </body>
+</html>
