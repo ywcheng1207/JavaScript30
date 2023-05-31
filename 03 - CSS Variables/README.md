@@ -1,40 +1,23 @@
-# <font color="#016cf4">Day3 - CSS Variables</font>
+# Day3 - CSS Variables [DEMO]()
 
----
+![](./screenshot.JPG)
 
-#### 這是一份的作品。
+## HTML
 
-<!-- HTML note -->
-<details>
-  <summary style="font-size: 17px; color: #83daff;">HTML </summary>
-  
-1. 關於 <br>
+1. 關於`input`標籤 <br>
+   - `type="range"`：顯示一個水平的 slider，另可以設定 min, max 和 step。
+   - `type="color"`：顯示一個 Color Picker。
 
-2. 關於 <br>
+## CSS
 
-3. 關於 <br>
+1. 關於在`:root`設定 CSS 變數 <br>
+   - 將變數定義在 root 的好處是方便全域使用、管理及修改。
 
-</details>
-<!-- CSS note-->
-<details>
-  <summary style="font-size: 17px; color: #83daff;">CSS </summary>
+## JS
 
-1. 關於 <br>
-
-2. 關於 <br>
-
-3. 關於 <br>
-
-</details>
-
-<!-- JS note-->
-<details>
-  <summary style="font-size: 17px; color: #83daff;">JS </summary>
-
-1. 關於 <br>
-
-2. 關於 <br>
-
-3. 關於 <br>
-
-</details>
+1. 關於`mousemove` <br>
+   - 若只有設定 change 事件監聽器，當 slider 滑動期間就不會觸發 handleUpdate
+   - 也就是說，補上 mousemove 可以產生一邊滑動 slider、一邊看顏色變化的效果
+2. 關於`document.documentElement.style.setProperty()` <br>
+   - `document` 是指 html 文件，而 `document.documentElement` 是指 html 文件裡面的 html 節點
+   - 若是用`event.target.style`可以找到該節點的`CSSStyleDeclaration`，但是由於範例是要改動一開始設定在 root 的 CSS 變數，所以需要使用`document.documentElement`。
