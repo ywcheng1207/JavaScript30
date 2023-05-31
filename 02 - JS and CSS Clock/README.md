@@ -2,9 +2,7 @@
 
 ![](./screenshot.JPG)
 
-<!-- CSS note-->
-<details>
-  <summary>CSS </summary>
+## CSS
 
 1. 關於`transform-origin` 與 `transform: rotate()` <br>
 
@@ -14,11 +12,7 @@
 2. 關於`transition-timing-function` <br>
    - `transition-timing-function`用於定義 CSS 的`transition`期間如何隨時間變化的時間函數。它控制`transition`效果的速度和節奏。 其中，有類型可以選擇，也可以透過`cubic-bezier()`自訂函式。範例就是透過`cubic-bezier()`達到指針在每次移動的時候有微小抖動的效果。
 
-</details>
-
-<!-- JS note-->
-<details>
-  <summary>JS </summary>
+## JS
 
 1. 關於`const now = new Date()` 與 `const seconds = now.getSeconds()` <br>
 
@@ -35,15 +29,13 @@
    - 主要的參數是`setInterval(callback,delay)`，就是要給定要執行什麼和延遲多少時間。
    - 如果第一個 callback 參數有其他需要輸入的參數，可以在後面添加，以下是一個簡單的範例：
 
-```javascript
-function greet(name, message) {
-  console.log(`Hello, ${name}! ${message}`);
-}
+     ```javascript
+     function greet(name, message) {
+       console.log(`Hello, ${name}! ${message}`);
+     }
 
-const yourName = "Alice";
-const message = "How are you today?";
+     const yourName = "Alice";
+     const message = "How are you today?";
 
-setInterval(greet, 2000, yourName, message);
-```
-
-</details>
+     setInterval(greet, 2000, yourName, message);
+     ```

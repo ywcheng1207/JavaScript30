@@ -2,9 +2,8 @@
 
 ![](./screenshot.JPG)
 
-<details>
-  <summary>HTML </summary>
-  
+## HTML
+
 1. 關於 data attribute<br>
    `data-key` 屬性是自己定義的。 <br>
    `data-key="65"` 對應鍵盤的"A"。 (65 是 `keyCode`)
@@ -16,27 +15,22 @@
    方法 => `play()`: 撥放音檔<br>
    屬性 => `currentTime`: 可以拿到或設定當前撥放音檔的進度/時間
 
-</details>
-
-<details>
-  <summary>CSS </summary>
+## CSS
 
 1. 關於 `transition` 與 `transform`：(釐清容易搞混的功能 😅)<br>
-`transition` 是在控制 CSS 樣式變化的時間，而 `transfrom` 是控制變化的樣式。
-</details>
+   `transition` 是在控制 CSS 樣式變化的時間，而 `transfrom` 是控制變化的樣式。
 
-<details>
-  <summary>JS </summary>
+## JS
 
 1. 關於`transitionend`：<br>
-   - 透過 `transitionend` 抓到 CSS`transition` 結束的時間點，在該時間點針對"帶有 transform 屬性的節點"執行 `classList.remove("playing")`的動作。其中 transform 指是作者剛好挑那一個，其實在這組範例的樣式中，變化的還有 `border-color` 和 `box-shadow`等，所以也可以把那段程式改成：
 
-```javascript
-function removeTransition(e) {
-  if (e.propertyName !== "box-shadow") return;
-  this.classList.remove("playing");
-}
-```
+   - 透過 `transitionend` 抓到 CSS`transition` 結束的時間點，在該時間點針對"帶有 transform 屬性的節點"執行 `classList.remove("playing")`的動作。其中 transform 指是作者剛好挑那一個，其實在這組範例的樣式中，變化的還有 `border-color` 和 `box-shadow`等，所以也可以把那段程式改成：
+     ```javascript
+     function removeTransition(e) {
+       if (e.propertyName !== "box-shadow") return;
+       this.classList.remove("playing");
+     }
+     ```
 
 2. 關於`audio.currentTime = 0`重置撥放時間：<br>
    - 若每次按下按鍵，如果不重置音檔播放的時間，又連續按下按鍵<br>
@@ -48,25 +42,22 @@ function removeTransition(e) {
    - 根據 mdn 的資訊 `keyCode` 快被淘汰了，而是採用 `key` 來取代。<br>
    - 差別在於原先的 `keyCode` 給每個按鍵一個編號，所以需要像原本作者那樣對應每個編號的數字，而 `key` 則是直接對應該按鍵。<br>
      以下是修改成 `event.key` 的簡易範例：
-
-```html
-<body>
-  <div data-key="A" class="key">
-    <kbd>A</kbd>
-  </div>
-  <audio data-key="A" src="sounds/clap.wav"></audio>
-  <script>
-    const handlePlaySound = (e) => {
-      const audio = document.querySelector(
-        `audio[data-key="${e.key.toUpperCase()}"]`
-      );
-      console.log(audio);
-      audio.currentTime = 0;
-      audio.play();
-    };
-    window.addEventListener("keydown", handlePlaySound);
-  </script>
-</body>
-```
-
-</details>
+     ```html
+     <body>
+       <div data-key="A" class="key">
+         <kbd>A</kbd>
+       </div>
+       <audio data-key="A" src="sounds/clap.wav"></audio>
+       <script>
+         const handlePlaySound = (e) => {
+           const audio = document.querySelector(
+             `audio[data-key="${e.key.toUpperCase()}"]`
+           );
+           console.log(audio);
+           audio.currentTime = 0;
+           audio.play();
+         };
+         window.addEventListener("keydown", handlePlaySound);
+       </script>
+     </body>
+     ```
