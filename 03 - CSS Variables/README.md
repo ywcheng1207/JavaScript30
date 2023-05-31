@@ -1,4 +1,4 @@
-# Day3 - CSS Variables [DEMO]()
+# Day3 - CSS Variables [DEMO](https://ywcheng1207.github.io/JavaScript30/03%20-%20CSS%20Variables/index-START.html)
 
 ![](./screenshot.JPG)
 
