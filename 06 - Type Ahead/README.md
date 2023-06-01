@@ -28,7 +28,7 @@
   ```
 
 - 關於 Regular Expression<br>
-  透過這個範例第一次接觸 Regular Expression，我在資料夾中的 learnRegExp.js 整理了一份，練習了一些基本操作供參考。
+  透過這個範例第一次接觸 Regular Expression，我在資料夾中的 learnRegExp.js 整理了練習範例供參考。
 
 - 關於 `numberWithCommas`：<br>
   這個函數的作用是把一個數字轉換成一個帶有千分位逗號。<br>
