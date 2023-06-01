@@ -144,32 +144,16 @@
       // panels.forEach((panel) => panel.addEventListener("click", toggleOpen));
 
       // 方法2
-      // const panels = document.querySelector(".panels");
-      // const toggleOpen = (e) => {
-      //   const panel = e.target.closest(".panel");
-      //   if (!panel) {
-      //     return;
-      //   }
-      //   panel.classList.toggle("open");
-      //   panel.firstElementChild.classList.toggle("open-active");
-      //   panel.lastElementChild.classList.toggle("open-active");
-      // };
-      // panels.addEventListener("click", toggleOpen);
-
       const panels = document.querySelector(".panels");
-      // const toggleOpen = (e) => {
-      //   const panel = e.target.closest(".panel");
-      //   if (!panel) {
-      //     return;
-      //   }
-      //   panel.classList.toggle("open");
-      //   panel.firstElementChild.classList.toggle("open-active");
-      //   panel.lastElementChild.classList.toggle("open-active");
-      // };
-      function toggleOpen(){
-        console.log(this)
-        // this.classList.toggle("open");
-      }
+      const toggleOpen = (e) => {
+        const panel = e.target.closest(".panel");
+        if (!panel) {
+          return;
+        }
+        panel.classList.toggle("open");
+        panel.firstElementChild.classList.toggle("open-active");
+        panel.lastElementChild.classList.toggle("open-active");
+      };
       panels.addEventListener("click", toggleOpen);
     </script>
   </body>
