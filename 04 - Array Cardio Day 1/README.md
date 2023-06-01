@@ -1,4 +1,4 @@
-# Day3 - CSS Variables [DEMO](https://ywcheng1207.github.io/JavaScript30/04%20-%20Array%20Cardio%20Day%201/index-START.html)
+# Day4 - CSS Variables [DEMO](https://ywcheng1207.github.io/JavaScript30/04%20-%20Array%20Cardio%20Day%201/index-START.html)
 
 ![](./screen.png)
 
