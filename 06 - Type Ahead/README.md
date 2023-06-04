@@ -1,4 +1,4 @@
-# Day6 - [DEMO](https://ywcheng1207.github.io/JavaScript30/06%20-%20Type%20Ahead/index-START.html)
+# Day6 - Type Ahead [DEMO](https://ywcheng1207.github.io/JavaScript30/06%20-%20Type%20Ahead/index-START.html)
 
 ![](./screenshot.JPG)
 
