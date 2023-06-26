@@ -1,4 +1,4 @@
-# Day7 - Array Cardio Day 2 [DEMO](https://ywcheng1207.github.io/JavaScript30/07%20-%20Array%20Cardio%20Day%202/index-START.html)
+# Day7 - Array Cardio Day 7 [DEMO](https://ywcheng1207.github.io/JavaScript30/07%20-%20Array%20Cardio%20Day%202/index-START.html)
 
 ![](./screenshot.gif)
 

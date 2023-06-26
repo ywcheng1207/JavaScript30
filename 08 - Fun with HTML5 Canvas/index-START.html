@@ -1,20 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>HTML5 Canvas</title>
-  <link rel="icon" href="https://fav.farm/🔥" />
-</head>
-<body>
-<canvas id="draw" width="800" height="800"></canvas>
-<script>
-</script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Canvas</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <!-- 加入html的canvas，這個元素是一個繪圖區域-->
+    <canvas id="draw" width="800" height="800"></canvas>
+    <script>
+      const canvas = document.querySelector('#draw')
+      // 透過getContext可以定義這個繪圖區域內的繪圖方法
+      const ctx = canvas.getContext('2d')
+      // canvas.width = window.innerWidth
+      // canvas.height = window.innerHeight
+      // 2d這個方法有許多屬性，底下這幾個就是範例
+      ctx.strokeStyle = '#BADA55'
+      ctx.lineJoin = 'round'
+      ctx.lineCap = 'round'
+      ctx.lineWidth = 50
+      // ctx.globalCompositeOperation = 'multiply'
 
-<style>
-  html, body {
-    margin: 0;
-  }
-</style>
+      let isDrawing = false
+      let lastX = 0
+      let lastY = 0
+      let hue = 0
+      let direction = true
 
-</body>
+      // 這是作者定義的一種繪圖函式
+      function draw(e) {
+        if (!isDrawing) return
+        // 透過改變hsl的參數，在mousemove的過程中改變顏色
+        ctx.strokeStyle = `hsl(${hue},100%,50%)`
+        // 每次執行draw都會開啟一個新的繪圖路徑
+        ctx.beginPath()
+        // 定義畫圖起始位置 (需釐清畫圖的起始位置與滑鼠點擊的落點不一定相同)
+        ctx.moveTo(lastX, lastY)
+        // 透過offset取得游標位置，表示他會從繪圖的起點畫線至游標的位置
+        ctx.lineTo(e.offsetX, e.offsetY)
+        // 前面都是在定義畫圖的方法，而stroke才是實際執行「畫圖」
+        ctx.stroke()
+        // 游標移動的過程，起點位置要跟著改變，不然就會一直從一開始的起點連線到當前游標的位置
+        lastX = e.offsetX
+        lastY = e.offsetY
+        hue++
+        // 超過hsl的參數最大值，就回到0
+        if (hue >= 360) {
+          hue = 0
+        }
+        // 讓畫筆逐漸放大縮小的設定
+        // 這裡給一個direction狀態，當達到最大或最小值就會開始遞減或遞增
+        if (ctx.lineWidth >= 50 || ctx.lineWidth <= 1) {
+          direction = !direction
+        }
+        if (direction) {
+          ctx.lineWidth++
+        } else {
+          ctx.lineWidth--
+        }
+      }
+
+      canvas.addEventListener('mousemove', draw)
+      canvas.addEventListener('mousedown', (e) => {
+        isDrawing = true
+        // mousedown的瞬間就需要改變起點位置，不然圖形的第一筆會從一開始的(0,0)連線至游標位置
+        lastX = e.offsetX
+        lastY = e.offsetY
+      })
+      canvas.addEventListener('mouseup', () => (isDrawing = false))
+      canvas.addEventListener('mouseout', () => (isDrawing = false))
+    </script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+      canvas {
+        margin: 0 auto;
+        display: block;
+      }
+    </style>
+  </body>
 </html>
