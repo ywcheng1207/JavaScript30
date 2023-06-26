@@ -1,4 +1,4 @@
-# Day7 - Array Cardio Day 8 [DEMO]
+# Day8 - Array Cardio [DEMO](https://ywcheng1207.github.io/JavaScript30/08%20-%20Fun%20with%20HTML5%20Canvas/index-START.html)
 
 ![](./screenshot.gif)
 
