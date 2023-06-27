@@ -2,8 +2,6 @@
 
 ![](./screenshot.JPG)
 
-## HTML
-
 ## CSS
 
 - 關於 panel 的 CSS
