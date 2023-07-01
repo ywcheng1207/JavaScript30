@@ -1,4 +1,4 @@
-# Day12 - Key Sequence Detection [DEMO]()
+# Day12 - Key Sequence Detection [DEMO](https://ywcheng1207.github.io/JavaScript30/12%20-%20Key%20Sequence%20Detection/index-START.html)
 
 ![](./screenshot.JPG)
 
