@@ -1,4 +1,4 @@
-# Day11 - Custom Video Player [DEMO]()
+# Day12 - Key Sequence Detection [DEMO]()
 
 ![](./screenshot.JPG)
 
