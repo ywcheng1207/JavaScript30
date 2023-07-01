@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Key Detection</title>
-    <script type="text/javascript" src="./cornify.js"></script>
-    <link rel="icon" href="https://fav.farm/🔥" />
-  </head>
-  <body>
-    <div>請在畫面中依序輸入'wesbos'！</div>
-    <div>可以多輸入幾次！</div>
-    <script>
+# Day11 - Custom Video Player [DEMO]()
+
+![](./screenshot.JPG)
+
+## JS
+
+說明如下
+
+```javascript
       const pressed = []
       const secretCode = 'wesbos'
       window.addEventListener('keyup', (e) => {
@@ -26,7 +23,5 @@
           cornify_add()
         }
         console.log(pressed)
-      })
-    </script>
-  </body>
-</html>
+      }
+```
